@@ -1,25 +1,49 @@
 <style>
-    .quote {
-        background-color: grey;
-        opacity: 0.9;
+    .intro {
+        font-weight: bold;
     }
 </style>
-<div class="container">
-    <h1>QUOTES</h1>
-    <hr>
-    <div class="row">
-        <div class="col-md-6 border">
-            <app-quotes-form></app-quotes-form>
-        </div>
-        <div class="col-md-6 border">
-            <div *ngFor='let quote of quotes; let i = index' class="border m-5 p-3">
-                <h4 style="font-weight: bolder;">{{quote.type}} Quote created on {{quote.completeDate|date}}</h4>
-                <button (click)='showQuote(i)' class="btn btn-success">SHOW QUOTE</button>
-                <app-quotes-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
-                </app-quotes-detail>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="font-weight: bolder;" class="text-center border">Q&J</h1>
+        <hr>
+        <h5 class="text-center" class="intro border m-4 p-4">Hello there, Did you know that you can create a Quote here
+            just
+            by
+            filling in
+            the Create
+            Quote Form?
+            More so, You can upvote and downvote an already existing quote just by
+            clicking the like or
+            dislike icon.
+        </h5>
+
+        <div class="row">
+            <div class="col-md-6 border">
+                <app-quotes-form></app-quotes-form>
             </div>
-        </div>
+            <div class="col-md-6 border">
+                <div *ngFor='let quote of quotes; let i = index' class="border m-5 p-3">
+                    <h4 style="font-weight: bolder;">{{quote.type}} Quote created on {{quote.completeDate|date}}</h4>
+                    <button (click)='showQuote(i)' class="btn btn-success">SHOW QUOTE</button>
+                    <app-quotes-detail *ngIf='quote.showDescription' [quote]='quote'
+                        (isComplete)='deleteQuote($event,i)'>
+                    </app-quotes-detail>
 
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
+</body>
+
+</html>
