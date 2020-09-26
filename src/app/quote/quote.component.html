@@ -1,6 +1,14 @@
 <style>
     .intro {
         font-weight: bold;
+        color: white;
+        background-color: red;
+        opacity: 0.9;
+    }
+
+    .btn:hover {
+        font-weight: bolder;
+        color: black;
     }
 </style>
 <!DOCTYPE html>
@@ -28,10 +36,10 @@
         </h5>
 
         <div class="row">
-            <div class="col-md-6 border">
+            <div class="col-md-6 border mb-4 p-3 " style="background-color: red; opacity: 0.9; color: white;">
                 <app-quotes-form></app-quotes-form>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-md-6 border mb-4 " style="background-color: red; opacity: 0.9; color: white;">
                 <div *ngFor='let quote of quotes; let i = index' class="border m-5 p-3">
                     <h4 style="font-weight: bolder;">{{quote.type}} Quote created on {{quote.completeDate|date}}</h4>
                     <button (click)='showQuote(i)' class="btn btn-success">SHOW QUOTE</button>
