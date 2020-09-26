@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'quotes';
+  // quotes: string[] = [
+  //   'The purpose of our lives is to be happy'
+  // ];
 }

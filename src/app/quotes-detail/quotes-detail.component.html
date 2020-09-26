@@ -1,0 +1,5 @@
+<p>{{quote.description}}</p>
+<p>Author:-{{quote.author}}-</p>
+<p>Submitted By:{{ quote.name}}</p>
+<p>This quote was created {{quote.completeDate|dateCount}} day ago</p>
+<button (click)='quoteDelete(true)'>Delete Quote</button>
