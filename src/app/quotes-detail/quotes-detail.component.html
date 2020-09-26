@@ -1,5 +1,21 @@
-<p>{{quote.description}}</p>
-<p>Author:-{{quote.author}}-</p>
-<p>Submitted By:{{ quote.name}}</p>
-<p>This quote was created {{quote.completeDate|dateCount}} day ago</p>
-<button (click)='quoteDelete(true)'>Delete Quote</button>
+<style>
+    h4 {
+        font-weight: bold;
+
+    }
+
+    .author {
+        color: darkred;
+    }
+
+    .submit {
+        color: darkred;
+    }
+</style>
+<div class="details border m-3 p-4">
+    <h4>{{quote.description}}</h4>
+    <h4 class="author">Author:-{{quote.author}}-</h4>
+    <h4 class="submit">Submitted By:{{ quote.name}}</h4>
+    <h5>This quote was created {{quote.completeDate|dateCount}} day ago</h5>
+    <button (click)='quoteDelete(true)' class="btn btn-danger">Delete Quote</button>
+</div>
