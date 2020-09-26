@@ -10,6 +10,15 @@
         font-weight: bolder;
         color: black;
     }
+
+    .heading {
+        color: red;
+    }
+
+    .theQuote:hover {
+        font-weight: bolder;
+        cursor: pointer;
+    }
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +33,7 @@
 
 <body>
     <div class="container">
-        <h1 style="font-weight: bolder;" class="text-center border">Q&J</h1>
+        <h1 style="font-weight: bolder;" class="heading text-center border">Q&J</h1>
         <hr>
         <h5 class="text-center" class="intro border m-4 p-4">Hello there, Did you know that you can create a Quote here
             just
@@ -39,9 +48,11 @@
 
         <div class="row">
             <div class="col-md-6 border mb-4 p-3 " style="background-color: red; opacity: 0.9; color: white;">
+
                 <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
             </div>
             <div class="col-md-6 border mb-4 " style="background-color: red; opacity: 0.9; color: white;">
+                <h2 style="text-decoration: underline;" class="theQuote text-center mt-3">QUOTES</h2>
                 <div *ngFor='let quote of quotes; let i = index' class="border m-5 p-3">
                     <h4 style="font-weight: bolder;">{{quote.type}} Quote created on {{quote.completeDate|date}}</h4>
                     <button (click)='showQuote(i)' class="btn btn-success">SHOW QUOTE</button>

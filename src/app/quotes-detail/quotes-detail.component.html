@@ -18,10 +18,21 @@
         font-weight: bolder;
     }
 </style>
-<div class="details border m-3 p-4">
-    <h4>{{quote.description}}</h4>
-    <h4 class="author">Author:-{{quote.author}}-</h4>
-    <h4 class="submit">Submitted By:{{ quote.name}}</h4>
-    <h5>This quote was created {{quote.completeDate|dateCount}} day ago</h5>
-    <button (click)='quoteDelete(true)' class="btn btn-danger">Delete Quote</button>
+<div class="containiner">
+
+    <hr>
+    <div class="details border m-3 p-4">
+
+        <h4>{{quote.description}}</h4>
+        <h4 class="author">Author:-{{quote.author}}-</h4>
+        <h4 class="submit">Submitted By:{{ quote.name}}</h4>
+        <h5>This quote was created {{quote.completeDate|dateCount}} days ago</h5>
+        <button (click)='quoteDelete(true)' class="btn btn-danger">Delete Quote</button>
+
+    </div>
+    <div>
+        <button class="ml-3 btn bg-success">Upvote</button>
+        <button class="ml-5 btn bg-success">DownVote</button>
+        <h4>Number of Votes:</h4>
+    </div>
 </div>

@@ -8,7 +8,6 @@
         cursor: pointer;
     }
 </style>
-
 <div class="container-fluid">
 
     <h2 class="creation text-center" style="text-decoration: underline;">CREATE A QUOTE</h2>
@@ -40,6 +39,14 @@
                 #author='ngModel' required>
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                 <p>Who Quoted this ?.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="date">DATE:</label>
+            <input type="date" class="form-control" id="completeDate" [(ngModel)]="newQuote.completeDate"
+                name="completeDate" #completeDate='ngModel' required>
+            <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+                <p>When was this Created?.</p>
             </div>
         </div>
         <div class="form-group">
