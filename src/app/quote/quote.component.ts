@@ -9,8 +9,8 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'Life', 'Life is Good', 'Nelly', 'Nelly', new Date(2020, 8, 25)),
-    new Quote(2, 'Life', 'Life is Good', 'Nelly', 'Ayebale Nelly', new Date(2020, 8, 25))
+    new Quote(1, 'Life', 'Life is Good', 'Nelly', 'Nelly', new Date(2020, 8, 25), 0, 0),
+    new Quote(2, 'Life', 'Life is Good', 'Nelly', 'Ayebale Nelly', new Date(2020, 8, 25), 0, 0)
   ]
   showQuote(index) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -30,6 +30,7 @@ export class QuoteComponent implements OnInit {
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
+
   constructor() { }
 
   ngOnInit(): void {

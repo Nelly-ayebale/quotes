@@ -18,7 +18,7 @@
         font-weight: bolder;
     }
 </style>
-<div class="containiner">
+<div class="container">
 
     <hr>
     <div class="details border m-3 p-4">
@@ -30,9 +30,15 @@
         <button (click)='quoteDelete(true)' class="btn btn-danger">Delete Quote</button>
 
     </div>
+
     <div>
-        <button class="ml-3 btn bg-success">Upvote</button>
-        <button class="ml-5 btn bg-success">DownVote</button>
-        <h4>Number of Votes:</h4>
+        <button class="ml-3 btn bg-success" type="submit">Upvote</button>
+        <h4 class="ml-3">Upvotes:{{quote.Upvote}}</h4>
     </div>
+    <div>
+        <button class="ml-3 btn bg-success" type="submit">DownVote</button>
+
+        <h4 class="ml-3">Downvotes:{{quote.Downvote}}</h4>
+    </div>
+
 </div>
