@@ -1,3 +1,9 @@
+<style>
+    .quote {
+        background-color: grey;
+        opacity: 0.9;
+    }
+</style>
 <div class="container">
     <h1>QUOTES</h1>
     <hr>
@@ -7,8 +13,8 @@
         </div>
         <div class="col-md-6 border">
             <div *ngFor='let quote of quotes; let i = index' class="border m-5 p-3">
-                <h4>{{quote.type}} Quote created on {{quote.completeDate|date}}</h4>
-                <button (click)='showQuote(i)'>SHOW QUOTE</button>
+                <h4 style="font-weight: bolder;">{{quote.type}} Quote created on {{quote.completeDate|date}}</h4>
+                <button (click)='showQuote(i)' class="btn btn-success">SHOW QUOTE</button>
                 <app-quotes-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
                 </app-quotes-detail>
 
