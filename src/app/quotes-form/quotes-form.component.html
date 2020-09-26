@@ -14,7 +14,7 @@
     <h2 class="creation text-center" style="text-decoration: underline;">CREATE A QUOTE</h2>
     <hr>
 
-    <form #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
 
         <div class="form-group">
             <label for="name">TYPE OF QUOTE:</label>

@@ -39,7 +39,7 @@
 
         <div class="row">
             <div class="col-md-6 border mb-4 p-3 " style="background-color: red; opacity: 0.9; color: white;">
-                <app-quotes-form></app-quotes-form>
+                <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
             </div>
             <div class="col-md-6 border mb-4 " style="background-color: red; opacity: 0.9; color: white;">
                 <div *ngFor='let quote of quotes; let i = index' class="border m-5 p-3">
