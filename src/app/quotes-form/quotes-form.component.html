@@ -7,20 +7,33 @@
             <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.type" name="type" #type='ngModel'
                 required>
             Display:{{newQuote.type}}
+
+            <div [hidden]="type.valid || type.pristine" class="alert alert-danger">
+                <p>Type is required.</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="description">QUOTE</label>
             <textarea type="text" class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description"
                 name="description" #description='ngModel' required></textarea>
+            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                <p>A Quote is required.</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="author">AUTHOR:</label>
             <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"
                 #author='ngModel' required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Who Quoted this ?.</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="author">SUBMITTED BY:</label>
             <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'
                 required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Enter the person who is submitting this Quote.</p>
+            </div>
         </div>
     </form>
