@@ -8,6 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuotesDetailComponent } from './quotes-detail/quotes-detail.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -18,7 +19,8 @@ import { QuotesFormComponent } from './quotes-form/quotes-form.component';
     QuoteComponent,
     QuotesDetailComponent,
     DateCountPipe,
-    QuotesFormComponent
+    QuotesFormComponent,
+    NavbarComponent
 
 
 

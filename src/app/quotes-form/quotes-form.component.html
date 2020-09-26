@@ -2,16 +2,25 @@
     label {
         font-weight: bolder;
     }
+
+    .creation:hover {
+        font-weight: bolder;
+        cursor: pointer;
+    }
 </style>
+
 <div class="container-fluid">
-    <h2 class="text-center">CREATE A QUOTE</h2>
+
+    <h2 class="creation text-center" style="text-decoration: underline;">CREATE A QUOTE</h2>
     <hr>
+
     <form #quoteForm='ngForm'>
+
         <div class="form-group">
             <label for="name">TYPE OF QUOTE:</label>
             <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.type" name="type" #type='ngModel'
                 required>
-            Display:{{newQuote.type}}
+
 
             <div [hidden]="type.valid || type.pristine" class="alert alert-danger">
                 <p>Type is required.</p>
