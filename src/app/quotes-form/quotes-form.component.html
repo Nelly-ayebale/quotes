@@ -3,8 +3,24 @@
     <hr>
     <form #quoteForm='ngForm'>
         <div class="form-group">
-            <label for="name">QUOTE:</label>
+            <label for="name">TYPE OF QUOTE:</label>
             <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.type" name="type" #type='ngModel'
+                required>
+            Display:{{newQuote.type}}
+        </div>
+        <div class="form-group">
+            <label for="description">QUOTE</label>
+            <textarea type="text" class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description"
+                name="description" #description='ngModel' required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="author">AUTHOR:</label>
+            <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"
+                #author='ngModel' required>
+        </div>
+        <div class="form-group">
+            <label for="author">SUBMITTED BY:</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'
                 required>
         </div>
     </form>
