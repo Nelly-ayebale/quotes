@@ -21,10 +21,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     DateCountPipe,
     QuotesFormComponent,
     NavbarComponent
-
-
-
-
   ],
   imports: [
     BrowserModule,
