@@ -46,12 +46,15 @@
         <div class="col-md-6 border mb-4 " style="background-color: red; opacity: 0.9; color: white;">
             <h2 style="text-decoration: underline;" class="theQuote text-center mt-3">QUOTES</h2>
             <div *ngFor='let quote of quotes; let i = index' class="border m-5 p-3">
-                <h4 style="font-weight: bolder;">{{quote.type}} Quote created on {{quote.completeDate|date}}</h4>
+                <h4 style="font-weight: bolder;">{{quote.type}} Quote created on
+                    {{quote.completeDate|date}}</h4>
                 <button (click)='showQuote(i)' class="btn btn-success">SHOW QUOTE</button>
                 <app-quotes-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
                 </app-quotes-detail>
+
                 <button class="ml-3 btn bg-success" (click)='addUpvote(i)'>Upvote</button>
                 <button class="ml-3 btn bg-success" (click)='addDownvote(i)'>DownVote</button>
+                <p *ngIf='quote === highestUpvote()'>This is the Quote with the most Upvotes.</p>
             </div>
 
         </div>
