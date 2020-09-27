@@ -9,6 +9,7 @@ import { QuotesDetailComponent } from './quotes-detail/quotes-detail.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 
@@ -22,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     DateCountPipe,
     QuotesFormComponent,
     NavbarComponent,
+    HighlightDirective,
 
   ],
   imports: [

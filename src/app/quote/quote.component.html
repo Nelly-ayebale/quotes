@@ -54,7 +54,9 @@
 
                 <button class="ml-3 btn bg-success" (click)='addUpvote(i)'>Upvote</button>
                 <button class="ml-3 btn bg-success" (click)='addDownvote(i)'>DownVote</button>
-                <p *ngIf='quote === highestUpvote()'>This is the Quote with the most Upvotes.</p>
+                <h5 *ngIf='quote === highestUpvote()' appHighlight>{{quote.description}} by {{quote.author}}, is the
+                    quote with the most
+                    Upvotes.</h5>
             </div>
 
         </div>
