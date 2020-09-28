@@ -45,6 +45,8 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 - The application should have an Upvote and Downvote button to upvote tor downvote the available quotes or created quotes.
 - The application should highlight the quote with the most votes.
 
+## Figma 
+[here](https://www.figma.com/file/usW9IWyAI7qDC3NHuHl4VC/Quotes?node-id=0%3A1)
 
 [MIT](LICENSE) © 
 

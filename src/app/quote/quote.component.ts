@@ -9,10 +9,10 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'Life', '"The Purpose of our lives is to be happy"', 'Dalai Lama', 'Nelly', new Date(1975, 8, 25)),
-    new Quote(2, 'Love', '"We accept the love we think we deserve"', 'Stephen Chbosky', 'Ayebale Nelly', new Date(2000, 6, 25)),
+    new Quote(1, 'Life', 'The Purpose of our lives is to be happy', 'Dalai Lama', 'Nelly', new Date(1975, 8, 25)),
+    new Quote(2, 'Love', 'We accept the love we think we deserve', 'Stephen Chbosky', 'Ayebale Nelly', new Date(2000, 6, 25)),
 
-    new Quote(3, 'Family', '"A happy family is but an earlier heaven"', 'George Bernard Shaw', 'Nelly A', new Date(2000, 8, 25)),
+    new Quote(3, 'Family', 'A happy family is but an earlier heaven', 'George Bernard Shaw', 'Nelly A', new Date(2000, 8, 25)),
   ]
   showQuote(index) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;

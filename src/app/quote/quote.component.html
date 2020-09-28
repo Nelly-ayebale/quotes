@@ -19,6 +19,11 @@
         font-weight: bolder;
         cursor: pointer;
     }
+
+    .btnDownvote {
+        background-color: crimson;
+        color: white;
+    }
 </style>
 
 <app-navbar></app-navbar>
@@ -53,7 +58,7 @@
                 </app-quotes-detail>
 
                 <button class="ml-3 btn bg-success" (click)='addUpvote(i)'>Upvote</button>
-                <button class="ml-3 btn bg-success" (click)='addDownvote(i)'>DownVote</button>
+                <button class="ml-3  btn btnDownvote " (click)='addDownvote(i)'>DownVote</button>
                 <h5 *ngIf='quote === highestUpvote()' appHighlight>{{quote.description}} by {{quote.author}}, is the
                     quote with the most
                     Upvotes.</h5>
