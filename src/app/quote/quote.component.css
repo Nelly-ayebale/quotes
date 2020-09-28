@@ -1,0 +1,26 @@
+
+    .intro {
+        font-weight: bold;
+        color: white;
+        background-color: red;
+        opacity: 0.9;
+    }
+
+    .btn:hover {
+        font-weight: bolder;
+        color: black;
+    }
+
+    .heading {
+        color: red;
+    }
+
+    .theQuote:hover {
+        font-weight: bolder;
+        cursor: pointer;
+    }
+
+    .btnDownvote {
+        background-color: crimson;
+        color: white;
+    }

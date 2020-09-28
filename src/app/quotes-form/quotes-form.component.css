@@ -1,0 +1,9 @@
+
+    label {
+        font-weight: bolder;
+    }
+
+    .creation:hover {
+        font-weight: bolder;
+        cursor: pointer;
+    }
