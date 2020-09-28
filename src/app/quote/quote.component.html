@@ -11,8 +11,8 @@
         the Create
         Quote Form?
         More so, You can upvote and downvote an already existing quote just by
-        clicking the like or
-        dislike icon.
+        clicking the Upvote or
+        Downvote button.
     </h5>
 
     <div class="row">
@@ -31,7 +31,7 @@
 
                 <button class="ml-3 btn bg-success" (click)='addUpvote(i)'>Upvote</button>
                 <button class="ml-3  btn btnDownvote " (click)='addDownvote(i)'>DownVote</button>
-                <h5 *ngIf='quote === highestUpvote()' appHighlight>{{quote.description}} by {{quote.author}}, is the
+                <h5 *ngIf='quote === highestUpvote() ' appHighlight>{{quote.description}} by {{quote.author}}, is the
                     quote with the most
                     Upvotes.</h5>
             </div>
